@@ -38,4 +38,5 @@ void main(List<String> arguments) {
 
   print('Converte String para double');
   print(double.parse('10'));
+  print(double.tryParse('teste'));
 }
