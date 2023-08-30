@@ -6,9 +6,9 @@ import 'dart:io';
 void main(List<String> arguments) {
   print('Bem vindo a nossa calculadora!');
 
-  var num1 = double.parse(lerConsole('Informe o primeiro número'));
+  var num1 = lerConsoleDouble(lerConsole('Informe o primeiro número'));
 
-  var num2 = double.parse(lerConsole('Informe o segundo número'));
+  var num2 = lerConsoleDouble(lerConsole('Informe o segundo número'));
 
   var operation = lerConsole('Informe a operação matemática (+, -, *, /)');
 
@@ -38,6 +38,10 @@ void calcular(String operation, double num1, double num2) {
 
   print('Operação solicitada: $operation');
   print('O resultado da operação é: $result');
+}
+
+double lerConsoleDouble(String texto) {
+  return double.parse(lerConsole(texto));
 }
 
 String lerConsole(String texto) {
